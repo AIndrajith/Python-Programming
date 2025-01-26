@@ -46,16 +46,20 @@ while choice != "0":
         term = input("What term do you want me to add?: ")
         if term in geek:
             definition = input("\nWhat's the definition?: ")
+            
+            #this line creates a new item in geek
             geek[term] = definition
             print("\n",term ,"has been added.")                
         else:
             print("\nThat term already exits! Try redefining it.")
 
-#redifining an exic=sting term
+#redifining an existing term
     elif choice =="3":
-        term = input("What term do you wat me to redefining? : ")
+        term = input("What term do you want me to redefining? : ")
         if term in geek:
             definition = input("What's the new definition?: ")
+            
+            # replaces the current value with the new one
             geek[term] = definition
             print("\n", term, "has been redifined.")
         else:
@@ -65,6 +69,8 @@ while choice != "0":
     elif choice == "4":
         term = input("What term do you want me to delete?: ")
         if term in geek:
+            
+            # this deletes the item with the key term the dictionary geek
             del geek[term]
             print("\nOkay, I deleted", term)
         else:
